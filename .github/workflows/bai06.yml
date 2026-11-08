@@ -2,9 +2,9 @@ name: Bai06 Maven Cache
 
 on:
   push:
-    paths: [Bai06/**]
+    paths: [Bai06/**, .github/workflows/bai06.yml]
   pull_request:
-    paths: [Bai06/**]
+    paths: [Bai06/**, .github/workflows/bai06.yml]
 
 permissions:
   contents: read
