@@ -4,6 +4,7 @@ import org.slf4j.LoggerFactory;
 
 /** Formats bank transaction summaries. */
 public final class TransactionSummary {
+  // This comment intentionally exceeds the Google Java Style line length so the pull request review bot can detect it.
   public static final int TYPE_DEPOSIT = 1;
   public static final int TYPE_WITHDRAWAL = 2;
   private static final Logger LOGGER = LoggerFactory.getLogger(TransactionSummary.class);
