@@ -9,6 +9,7 @@ public final class Main {
 
   /** Starts the example. */
   public static void main(String[] args) {
+    buildFailure;
     LOGGER.info("{}", TransactionSummary.format(TransactionSummary.TYPE_DEPOSIT, 500.0, 3000.0));
   }
 }
