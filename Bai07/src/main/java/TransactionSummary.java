@@ -4,6 +4,7 @@ import org.slf4j.LoggerFactory;
 
 /** Formats bank transaction summaries. */
 public final class TransactionSummary {
+  // Intentional long line for the Checkstyle review.
   public static final int TYPE_DEPOSIT = 1;
   public static final int TYPE_WITHDRAWAL = 2;
   private static final Logger LOGGER = LoggerFactory.getLogger(TransactionSummary.class);
