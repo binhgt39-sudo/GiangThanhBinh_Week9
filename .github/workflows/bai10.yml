@@ -1,4 +1,10 @@
-name: Bai10 Shipping Pipeline on: push
+name: Bai10 Shipping Pipeline
+
+on:
+  push:
+    paths: [Bai10/**]
+  pull_request:
+    paths: [Bai10/**]
 
 permissions:
   contents: read
