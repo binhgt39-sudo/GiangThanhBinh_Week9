@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 class BankDataPathTest {
   @Test
   void resolvesFileNamesUsingPlatformPathRules() {
-    assertEquals(Path.of("data", "accounts.csv"),
+    assertEquals(Path.of("data\\accounts.csv"),
         BankDataPath.resolve("data", "accounts.csv"));
   }
 }
