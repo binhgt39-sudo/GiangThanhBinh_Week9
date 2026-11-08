@@ -1,0 +1,28 @@
+name: Bai05 Coverage
+
+on:
+  push:
+    paths: [Bai05/**]
+  pull_request:
+    paths: [Bai05/**]
+
+permissions:
+  contents: read
+
+jobs:
+  bai05-verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: '25'
+      - name: Test and check coverage
+        run: mvn --batch-mode verify
+        working-directory: Bai05
+      - uses: actions/upload-artifact@v6
+        with:
+          name: bai05-jacoco-report
+          path: Bai05/target/site/jacoco/index.html
+          if-no-files-found: error

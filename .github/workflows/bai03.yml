@@ -1,0 +1,28 @@
+name: Bai03 Maven CI
+
+on:
+  push:
+    paths: [Bai03/**]
+  pull_request:
+    paths: [Bai03/**]
+
+permissions:
+  contents: read
+
+jobs:
+  bai03-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: '25'
+      - name: Test and package
+        run: mvn --batch-mode verify
+        working-directory: Bai03
+      - uses: actions/upload-artifact@v6
+        with:
+          name: bai03-jar
+          path: Bai03/target/*.jar
+          if-no-files-found: error
