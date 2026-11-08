@@ -21,7 +21,7 @@ jobs:
           java-version: '25'
           cache: maven
       - name: Show Maven cache result
-        run: echo "Maven cache hit: ${{ steps.setup-java.outputs.cache-hit }}"
+        run: 'echo "Maven cache hit: ${{ steps.setup-java.outputs.cache-hit }}"'
       - name: Test and check coverage
         run: mvn --batch-mode verify
         working-directory: Bai06
